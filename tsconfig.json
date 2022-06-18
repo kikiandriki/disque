@@ -22,8 +22,6 @@
       "@config": ["config.json"],
       "@db/*": ["src/db/*"],
       "@middlewares/*": ["src/middlewares/*"],
-      "@processes/*": ["src/processes/*"],
-      "@providers/*": ["src/repositories/*"],
       "@repositories/*": ["src/repositories/*"],
       "@routes/*": ["src/routes/*"],
       "@schemas/*": ["src/schemas/*"],

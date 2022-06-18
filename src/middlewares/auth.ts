@@ -109,5 +109,5 @@ export const auth = async (
 ) => {
   const actor = await checkAuth({ headers: req.headers })
   req.actor = actor
-  next()
+  return next()
 }
