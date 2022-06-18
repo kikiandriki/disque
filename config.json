@@ -1,5 +1,6 @@
 {
   "cdkStackName": "Disque",
   "authExpectedIssuer": "https://kikiandriki.us.auth0.com/",
-  "authExpectedAudience": "disque"
+  "authExpectedAudience": "kikiandriki",
+  "authExpectedAPIScope": "disque"
 }
