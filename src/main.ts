@@ -8,6 +8,9 @@ import "dotenv/config"
 // Application imports.
 import { app } from "@app"
 
+// Utility imports.
+import { logger } from "@utils/logger"
+
 /**
  * Main runner function.
  */
@@ -15,8 +18,8 @@ async function run() {
   // Do some pre-run async tasks.
 
   // Run the server.
-  app.listen(3000)
+  app.listen(3001)
 }
 
 // Run the application.
-run().catch((error) => console.error(error))
+run().catch(logger.error)

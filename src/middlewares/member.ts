@@ -20,7 +20,7 @@ export const member = async (
   next: NextFunction,
 ) => {
   const userId = req.actor.id
-  const user = await users.get(userId)
+  const user = await users.check(userId)
   if (!user) {
     throw new ForbiddenError("You are not a member of the server.")
   }

@@ -1,6 +1,8 @@
 declare global {
   interface DiscordMember {
-    id: string
+    user: {
+      id: string
+    }
   }
   namespace Express {
     export interface Request {
