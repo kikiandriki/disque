@@ -6,6 +6,7 @@
 import { cache } from "@utils/cache"
 import { ServerError } from "@utils/exceptions"
 import { discord } from "@utils/http"
+import { logger } from "@utils/logger"
 
 /**
  * The users repository class.
@@ -19,6 +20,7 @@ class UserRepository {
         await cache.set(`membership:${id}`, { member: false })
         return false
       } else if (response.status !== 200) {
+        logger.error(response)
         throw new ServerError("Failed to fetch user from Discord.")
       }
       await cache.set(`membership:${id}`, { member: true })
@@ -37,6 +39,7 @@ class UserRepository {
         await cache.set(`members:${id}`, { user: false })
         return
       } else if (response.status !== 200) {
+        logger.error(response)
         throw new ServerError("Failed to fetch user from Discord.")
       }
       await cache.set(`members:${id}`, response.data)
